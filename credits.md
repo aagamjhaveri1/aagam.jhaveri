@@ -4,7 +4,7 @@ title: Credits
 section_url: /credits
 ---
 
-{% if site.data.credits.assets %}
+{% if site.data.credits.assets.size > 0 %}
 ## Assets Used
 
 {% for asset in site.data.credits.assets.images %}
@@ -12,7 +12,7 @@ section_url: /credits
 {% endfor %}
 {% endif %}
 
-{% if site.data.credits.people %}
+{% if site.data.credits.people.size > 0 %}
 ## Support
 
 {% for person in site.data.credits.people %}
