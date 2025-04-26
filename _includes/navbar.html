@@ -1,0 +1,23 @@
+<details class="nav">
+  <summary>
+    <h1>
+      {{ page.title }}
+      <span>
+        <i class="fa fa-angle-down"></i>
+      </span>
+    </h1>
+  </summary>
+  <hr>
+  {% assign page_url = page.url | split: "." | first %}
+  <div class="nav-links">
+    {% for link in site.data.navigation.nav %}
+    {% unless link.url == page_url %}
+    <h2>
+    <a href="{{ link.url }}" class="nav-link">
+        {{ link.title }}
+    </a>
+    </h2>
+    {% endunless %}
+    {% endfor %}
+  </div>
+</details>

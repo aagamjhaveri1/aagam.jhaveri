@@ -1,0 +1,8 @@
+people:
+  - &harsh
+    name: "Harsh Parekh"
+
+testimonials:
+  - author: *harsh
+    testimony: >-
+      Aagam is one of the most dependable people I know, and an extremely proactive problem solver

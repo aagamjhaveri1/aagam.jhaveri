@@ -1,0 +1,93 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+#nav {
+  margin: 0 0 20px;
+}
+
+details.nav > summary {
+  list-style: none;
+}
+
+details.nav > summary.hover {
+  cursor: pointer;
+}
+
+#social-links {
+  display: grid;
+  background: inherit;
+  position: inherit;
+  grid-template-columns: repeat(10, auto);
+  border: none;
+  height: auto;
+  min-height: 20px;
+}
+
+#social-links > li{
+  border: none;
+  width: min-content;
+}
+
+#logo {
+  border: solid medium $primary-highlight-color;
+  border-radius: 50%;
+  max-width: 70%;
+}
+
+#logo:hover {
+  border-color: $secondary-highlight-color;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+#testimonial-split {
+  margin-top: 3rem;
+}
+
+.testimonial {
+  text-align: center;
+  font-size: smaller;
+  border: none;
+  padding: 0 2rem 0.5rem 2rem;
+}
+
+.testimony {
+  font-style: italic;
+}
+
+.testimonial > .author {
+  text-align: right;
+}
+
+.testimonial > .author ::before {
+  content: "— ";
+}
+
+@keyframes toast-popup {
+  0%   {bottom: -2.5rem;}
+  15%  {bottom: 2rem;}
+  75%  {bottom: 2rem;}
+  100% {bottom: -2.5rem;}
+}
+
+#toast {
+  position: fixed;
+  left: 1rem;
+  color: $primary-text-color;
+  padding: 8px 15px;
+  border-radius: 2px;
+  border: 1px solid $secondary-text-color;
+  animation-name: toast-popup;
+  animation-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-duration: 4s;
+}
